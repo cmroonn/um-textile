@@ -857,6 +857,10 @@ a {
     .contacts__heading {
       font-size: 22px; } }
 
+.contacts__btn {
+  margin: 25px 0 0;
+  width: 230px; }
+
 .contacts__address {
   font-size: 1.125rem;
   margin: 0; }
