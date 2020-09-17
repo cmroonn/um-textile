@@ -738,7 +738,7 @@ a {
   margin: auto;
 
   @media screen and (max-width: 768px) {
-    width: 90%;
+    width: 20%;
   }
 }
 
@@ -1621,6 +1621,21 @@ a {
     font-size: 12px;
     height: 38px;
     margin-top: 12px;
+  }
+  &:after {
+    content: "";
+    background: #393840;
+    opacity: 0.4;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    width: 158px;
+    height: 23px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
