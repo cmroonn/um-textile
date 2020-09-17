@@ -49,9 +49,46 @@
                 <span class="d-flex jc-center ai-center"> 99+ </span>
               </a>
 
-              <a href="#" class="header__top__actions__search">
+              <a
+                href="#"
+                class="header__top__actions__search"
+                id="showSearchbar"
+              >
                 <img src="img/icons/search.svg" alt="" />
               </a>
+
+              <div class="header__searchbar" id="searchbar">
+                <form class="d-flex ai-center">
+                  <div class="header__searchbar__string">
+                    <input
+                      type="text"
+                      placeholder="Здесь может быть ваш запрос, например: Хочу питсы"
+                    />
+
+                    <button type="button" id="closeSearchbar">
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.75007 5L10 1.75007L8.24993 0L5 3.24993L1.75007 0L0 1.75007L3.24993 5L0 8.24993L1.75007 10L5 6.75007L8.24993 10L10 8.24993L6.75007 5Z"
+                          fill="#393840"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <button type="submit">
+                    <img src="img/icons/search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -61,7 +98,7 @@
           <div class="container">
             <ul class="d-flex ai-center header__nav__menu">
               <li>
-                <a href="#">
+                <a href="#" id="catalogButton">
                   Каталог
                   <img src="img/icons/arrow-down.svg" alt="" />
                 </a>
@@ -111,10 +148,6 @@
           </p>
 
           <a href="#" class="empty__btn"> Перейти в каталог </a>
-
-          <img src="img/decor.svg" alt="" class="empty__decor-1" />
-
-          <img src="img/decor-2.svg" alt="" class="empty__decor-2" />
         </div>
       </section>
 

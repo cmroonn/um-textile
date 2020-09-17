@@ -13,6 +13,12 @@
       integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -112,7 +118,7 @@
           <div class="item__block">
             <div class="item__photo-block">
               <div class="item__photo-big">
-                <img src="img/card-item-2.png" alt="" />
+                <img src="img/card-item.png" alt="" />
               </div>
 
               <div class="item__photo__minis">
@@ -592,300 +598,288 @@
             </div>
           </div>
 
-          <!-- interesting -->
-          <section class="carousel-items item__interesting">
-            <h2>Возможно вам будет интересно</h2>
+          <section class="carousel-items main-page__popular item__similar">
+            <div class="container">
+              <h2>Наиболее популярное</h2>
 
-            <div class="item__interesting_slider swiper-container">
-              <div class="swiper-wrapper">
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
+              <div class="main-page__popular__slider swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-android">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide swiper-slide-active" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
 
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
 
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
 
-                      <!-- if sale .product-card__price.product-card__price-sale
+                        <!-- if sale .product-card__price.product-card__price-sale
                              else .product-card__price
                         -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
 
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide swiper-slide-next" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
+
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
+
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
+                        </div>
                       </div>
 
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
+
+                        <!-- if sale .product-card__price.product-card__price-sale
+                             else .product-card__price
+                        -->
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
+
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
+
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
+
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
+
+                        <!-- if sale .product-card__price.product-card__price-sale
+                             else .product-card__price
+                        -->
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
+
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
+
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
+
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
+
+                        <!-- if sale .product-card__price.product-card__price-sale
+                             else .product-card__price
+                        -->
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
+
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
+
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
+
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
+
+                        <!-- if sale .product-card__price.product-card__price-sale
+                             else .product-card__price
+                        -->
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
+
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide main-page__popular__slide" style="width: 133px; margin-right: 14px;">
+                    <div class="product-card">
+                      <!-- preview -->
+                      <div class="product-card__preview">
+                        <img src="img/card-item.png" alt="">
+
+                        <div class="product-card__status">
+                          <div class="product-card__status-item product-card__new">
+                            New
+                          </div>
+
+                          <div class="product-card__status-item product__card__sale">
+                            -50%
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- content -->
+                      <div class="product-card__content">
+                        <h3 class="text-center">
+                          Ткань рогожка меланж кетен (keten) на ПВХ основе синий
+                        </h3>
+                        <p class="text-center">#45451</p>
+
+                        <!-- if sale .product-card__price.product-card__price-sale
+                             else .product-card__price
+                        -->
+                        <div class="product-card__price product-card__price-sale">
+                          <span class="product-card__price__digit"> 559 </span>
+                          <span class="product-card__price__currency">
+                            ₽/пог.м
+
+                            <span class="product-card__old-price"> 769 </span>
+                          </span>
+                        </div>
+
+                        <button type="button" class="product-card__button">
+                          В корзину
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
+              <!-- pagination -->
+              <div class="slider_pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span></div>
 
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
+              <button type="button" class="slider_next_el" role="button" tabindex="0" aria-label="Next slide" aria-disabled="false">
+                <img src="img/icons/slider_next.svg" alt="">
+              </button>
 
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
-
-                      <!-- if sale .product-card__price.product-card__price-sale
-                             else .product-card__price
-                        -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
-
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
-                      </div>
-
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
-
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
-
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
-
-                      <!-- if sale .product-card__price.product-card__price-sale
-                             else .product-card__price
-                        -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
-
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
-                      </div>
-
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
-
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
-
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
-
-                      <!-- if sale .product-card__price.product-card__price-sale
-                             else .product-card__price
-                        -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
-
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
-                      </div>
-
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
-
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
-
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
-
-                      <!-- if sale .product-card__price.product-card__price-sale
-                             else .product-card__price
-                        -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
-
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
-                      </div>
-
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="product-card">
-                    <!-- preview -->
-                    <div class="product-card__preview">
-                      <img src="img/card-item.png" alt="" />
-
-                      <div class="product-card__status">
-                        <div
-                          class="product-card__status-item product-card__new"
-                        >
-                          New
-                        </div>
-
-                        <div
-                          class="product-card__status-item product__card__sale"
-                        >
-                          -50%
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- content -->
-                    <div class="product-card__content">
-                      <h3 class="text-center">
-                        Ткань рогожка меланж кетен (keten) на ПВХ основе синий
-                      </h3>
-                      <p class="text-center">#45451</p>
-
-                      <!-- if sale .product-card__price.product-card__price-sale
-                             else .product-card__price
-                        -->
-                      <div class="product-card__price product-card__price-sale">
-                        <span class="product-card__price__digit"> 559 </span>
-                        <span class="product-card__price__currency">
-                          ₽/пог.м
-
-                          <span class="product-card__old-price"> 769 </span>
-                        </span>
-                      </div>
-
-                      <button type="button" class="product-card__button">
-                        В корзину
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button type="button" class="slider_prev_el swiper-button-disabled" role="button" tabindex="-1" aria-label="Previous slide" aria-disabled="true">
+                <img src="img/icons/slider_prev.svg" alt="">
+              </button>
             </div>
           </section>
         </div>
@@ -893,7 +887,7 @@
 
       <!-- Footer -->
       <footer class="footer" id="footer">
-        <div class="d-flex container">
+        <div class="d-flex container footer__main">
           <div class="footer__col footer__first-col">
             <!-- Logo -->
             <a href="#" class="ai-center d-flex header__top__logo logo">
@@ -981,9 +975,42 @@
             </div>
           </div>
         </div>
+
+        <div class="d-flex container">
+          <div class="footer__down">
+            <p class="footer__down__copy">Copyright © УМ Текстиль, 2020</p>
+
+            <div class="d-flex ai-center footer__down__right">
+              <ul class="footer__down__links">
+                <li>
+                  <a href="#"> Пользовательское соглашение </a>
+                </li>
+
+                <li>
+                  <a href="#"> Политика обработки персональных данных </a>
+                </li>
+              </ul>
+
+              <a href="#" class="footer__down__creator">
+                Сделано в
+                <img src="img/sva.svg" alt="SVA Creative Agency" />
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
       integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww=="

@@ -13,6 +13,12 @@
       integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -304,6 +310,42 @@
               <li><a href="#">Женское</a></li>
               <li><a href="#">Мужское</a></li>
             </ul>
+
+            <!-- <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Базовый цвет</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Для одежды</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Текстиль</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Инструменты</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Самые дешевые</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Для костюма</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Женское</a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="catalog__tags__item">Мужское</a>
+                </div>
+              </div>
+            </div> -->
           </section>
           <!-- control panel -->
           <section class="catalog__control-panel">
@@ -324,11 +366,37 @@
               </ul>
             </div>
 
-            <!-- sort items by -->
-            <div class="catalog__control-panel__sort">
-              Сортировать:
+            <div class="d-flex catalog__control-panel__part">
+              <!-- sort items by -->
+              <div class="catalog__control-panel__sort">
+                Сортировать:
 
-              <div class="select_head">По умолчанию</div>
+                <select>
+                  <option value="По умолчанию">По умолчанию</option>
+                  <option value="По цене">По цене</option>
+                </select>
+              </div>
+
+              <button class="catalog__control-panel__clear">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.3">
+                    <path
+                      d="M13.4645 10.8787C14.1785 11.5927 14.1785 12.7504 13.4645 13.4645C12.7504 14.1785 11.5927 14.1785 10.8787 13.4645L0.535534 3.12132C-0.178511 2.40727 -0.178512 1.24958 0.535533 0.535534C1.24958 -0.178511 2.40727 -0.178511 3.12132 0.535534L13.4645 10.8787Z"
+                      fill="#393840"
+                    />
+                    <path
+                      d="M3.12132 13.4645C2.40728 14.1785 1.24958 14.1785 0.535534 13.4645C-0.178511 12.7504 -0.178511 11.5927 0.535534 10.8787L10.8787 0.535535C11.5927 -0.17851 12.7504 -0.17851 13.4645 0.535536C14.1785 1.24958 14.1785 2.40728 13.4645 3.12132L3.12132 13.4645Z"
+                      fill="#393840"
+                    />
+                  </g>
+                </svg>
+              </button>
             </div>
           </section>
 
@@ -336,6 +404,27 @@
           <section class="catalog__content">
             <!-- filters -->
             <div class="catalog__content__filters">
+              <button
+                type="button"
+                class="catalog__content__openFilters catalog__content__closeFilters"
+              >
+                Вернуться к товару
+
+                <svg
+                  width="8"
+                  height="6"
+                  viewBox="0 0 8 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.39644 0.138673C4.20773 0.32357 4.20773 0.623347 4.39644 0.808244L6.15011 2.52655L0.483198 2.5266C0.216333 2.5266 -1.90735e-06 2.73858 0 3.00006C2.38419e-06 3.26154 0.216341 3.47352 0.483206 3.47351L6.15009 3.47347L4.39644 5.19176C4.20773 5.37665 4.20773 5.67643 4.39644 5.86133C4.58514 6.04622 4.89108 6.04622 5.07979 5.86133L8 3L5.07979 0.138673C4.89108 -0.0462242 4.58514 -0.0462242 4.39644 0.138673Z"
+                    fill="#393840"
+                  />
+                </svg>
+              </button>
               <!-- active filters -->
               <div class="catalog__content__filters__active">
                 <div class="active_filter">
@@ -617,6 +706,24 @@
 
             <!-- products -->
             <div class="catalog__content__prods">
+              <button class="catalog__content__openFilters">
+                <svg
+                  width="8"
+                  height="6"
+                  viewBox="0 0 8 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3.60356 0.138673C3.79227 0.32357 3.79227 0.623347 3.60356 0.808244L1.84989 2.52655L7.5168 2.5266C7.78367 2.5266 8 2.73858 8 3.00006C8 3.26154 7.78366 3.47352 7.51679 3.47351L1.84991 3.47347L3.60356 5.19176C3.79227 5.37665 3.79227 5.67643 3.60356 5.86133C3.41486 6.04622 3.10892 6.04622 2.92021 5.86133L0 3L2.92021 0.138673C3.10892 -0.0462242 3.41486 -0.0462242 3.60356 0.138673Z"
+                    fill="#393840"
+                  />
+                </svg>
+
+                Открыть фильры
+              </button>
               <div class="catalog__content__prods_wrap">
                 <div class="product-card">
                   <!-- preview -->
@@ -789,14 +896,242 @@
                   </div>
                 </div>
               </div>
+
+              <ul class="d-flex catalog__content__prods__pagination">
+                <li class="next-page">
+                  <a href="#">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0"
+                        mask-type="alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="18"
+                        height="18"
+                      >
+                        <rect width="18" height="18" fill="#C4C4C4" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path
+                          d="M11.2651 3.73438L5.92871 9.07073L11.2651 14.4071"
+                          stroke="#393840"
+                          stroke-linecap="round"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="active">
+                  <a href="#"> 1 </a>
+                </li>
+
+                <li>
+                  <a href="#"> 2 </a>
+                </li>
+
+                <li>
+                  <a href="#"> 3 </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0"
+                        mask-type="alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="18"
+                        height="18"
+                      >
+                        <rect
+                          width="18"
+                          height="18"
+                          transform="matrix(-1 0 0 1 18 0)"
+                          fill="#C4C4C4"
+                        />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path
+                          d="M6.73438 3.73438L12.0707 9.07073L6.73438 14.4071"
+                          stroke="#393840"
+                          stroke-linecap="round"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </section>
         </div>
+
+        <section class="brands main-page__brands">
+          <div class="container">
+            <div class="brands__slider">
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-1.svg" alt="" />
+              </div>
+
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-2.png" alt="" />
+              </div>
+
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-3.png" alt="" />
+              </div>
+
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-4.png" alt="" />
+              </div>
+
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-5.png" alt="" />
+              </div>
+
+              <!-- slide -->
+              <div class="brands__slide">
+                <img src="img/brands/brand-6.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="philosophy main-page__philosophy">
+          <div class="container">
+            <h2 class="philosophy__heading">
+              Немного философии
+              <span>УМ Текстиль</span>
+            </h2>
+
+            <p class="font-montserrat philosophy__text">
+              Товарищи! консультация с широким активом способствует подготовки и
+              реализации дальнейших направлений развития. Значимость этих
+              проблем настолько очевидна,
+              <b>что постоянный количественный рост и сфера</b> нашей активности
+              представляет собой интересный эксперимент проверки модели
+              развития. С другой стороны постоянное
+              информационно-пропагандистское
+              <b>обеспечение нашей деятельности</b>
+              требуют определения и уточнения модели развития. Идейные
+              соображения высшего порядка, а также рамки и место обучения кадров
+              требуют определения и уточнения позиций, занимаемых участниками в
+              отношении поставленных задач.
+            </p>
+
+            <p class="font-montserrat philosophy__text">
+              Задача организации, в особенности же укрепление и развитие
+              структуры позволяет выполнять важные задания по разработке новых
+              предложений. Идейные соображения высшего порядка, а также
+              сложившаяся <b>структура организации</b> позволяет выполнять
+              важные задания по разработке направлений прогрессивного развития.
+            </p>
+
+            <div class="philosophy__digits">
+              <div class="philosophy__digit">
+                5+
+                <p>Лет на рынке</p>
+              </div>
+
+              <div class="philosophy__digit">
+                1000+
+                <p>Счастливых клиентов</p>
+              </div>
+
+              <div class="philosophy__digit">
+                24/7
+                <p>Возможность заказа</p>
+              </div>
+
+              <div class="philosophy__digit">
+                2000+
+                <p>Позиций товаров</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog__block_form">
+          <div class="catalog__block_form__pic">
+            <img src="img/pic.png" alt="" />
+          </div>
+
+          <div class="catalog__block_form__content">
+            <h2>Не знаете что выбрать ?</h2>
+
+            <p>
+              Мы с радостью вам поможем в выборе наилучших вариантов, опираясь
+              на все ваши потребности.
+            </p>
+
+            <form>
+              <div class="catalog__block_form__row">
+                <label class="cart-input">
+                  <div class="icon">
+                    <img src="img/icons/user_icon.svg" alt="user" />
+                  </div>
+                  <input
+                    type="text"
+                    name="firstname"
+                    placeholder="Имя"
+                    required=""
+                    class="field"
+                    tabindex="0"
+                  />
+                </label>
+
+                <label class="cart-input">
+                  <div class="icon">
+                    <img src="img/icons/phone_icon.svg" alt="phone" />
+                  </div>
+                  <input
+                    type="tel"
+                    name="tel"
+                    placeholder="Телефон*"
+                    required=""
+                    class="field"
+                  />
+                </label>
+              </div>
+
+              <div class="catalog__block_form__row">
+                <label class="cart-input">
+                  <div class="icon">
+                    <img src="img/icons/mail_icon.svg" alt="e-mail" />
+                  </div>
+                  <input type="text" name="e-mail" placeholder="E-mail" />
+                </label>
+
+                <button type="button" class="empty__btn">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
 
       <!-- Footer -->
       <footer class="footer" id="footer">
-        <div class="d-flex container">
+        <div class="d-flex container footer__main">
           <div class="footer__col footer__first-col">
             <!-- Logo -->
             <a href="#" class="ai-center d-flex header__top__logo logo">
@@ -884,9 +1219,42 @@
             </div>
           </div>
         </div>
+
+        <div class="d-flex container">
+          <div class="footer__down">
+            <p class="footer__down__copy">Copyright © УМ Текстиль, 2020</p>
+
+            <div class="d-flex ai-center footer__down__right">
+              <ul class="footer__down__links">
+                <li>
+                  <a href="#"> Пользовательское соглашение </a>
+                </li>
+
+                <li>
+                  <a href="#"> Политика обработки персональных данных </a>
+                </li>
+              </ul>
+
+              <a href="#" class="footer__down__creator">
+                Сделано в
+                <img src="img/sva.svg" alt="SVA Creative Agency" />
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
       integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww=="

@@ -49,9 +49,46 @@
                 <span class="d-flex jc-center ai-center"> 99+ </span>
               </a>
 
-              <a href="#" class="header__top__actions__search">
+              <a
+                href="#"
+                class="header__top__actions__search"
+                id="showSearchbar"
+              >
                 <img src="img/icons/search.svg" alt="" />
               </a>
+
+              <div class="header__searchbar" id="searchbar">
+                <form class="d-flex ai-center">
+                  <div class="header__searchbar__string">
+                    <input
+                      type="text"
+                      placeholder="Здесь может быть ваш запрос, например: Хочу питсы"
+                    />
+
+                    <button type="button" id="closeSearchbar">
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.75007 5L10 1.75007L8.24993 0L5 3.24993L1.75007 0L0 1.75007L3.24993 5L0 8.24993L1.75007 10L5 6.75007L8.24993 10L10 8.24993L6.75007 5Z"
+                          fill="#393840"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <button type="submit">
+                    <img src="img/icons/search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -61,7 +98,7 @@
           <div class="container">
             <ul class="d-flex ai-center header__nav__menu">
               <li>
-                <a href="#">
+                <a href="#" id="catalogButton">
                   Каталог
                   <img src="img/icons/arrow-down.svg" alt="" />
                 </a>
@@ -382,13 +419,50 @@
                 </span>
               </label>
             </div>
+
+            <div class="divider"></div>
+
+            <div class="cart__data__total">
+              <span> Всего к оплате: </span>
+
+              <p>16.000<span class="currency">₽</span></p>
+
+              <button type="button" class="empty__btn">
+                Подветвердить заказ
+              </button>
+
+              <label class="cart-checkbox cart__data-total-checkbox">
+                <input
+                  type="checkbox"
+                  value="Y"
+                  name="personal-data-checkbox"
+                  required=""
+                />
+                <span
+                  style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                  "
+                >
+                  Я подтверждаю свое согласие с
+                  <a
+                    href="#"
+                    class="dotted fw-700 text-uppercase"
+                    style="color: rgba(20, 20, 20, 0.5)"
+                  >
+                    Пользовательским соглашением
+                  </a>
+                </span>
+              </label>
+            </div>
           </div>
         </form>
       </div>
 
       <!-- Footer -->
       <footer class="footer" id="footer">
-        <div class="d-flex container">
+        <div class="d-flex container footer__main">
           <div class="footer__col footer__first-col">
             <!-- Logo -->
             <a href="#" class="ai-center d-flex header__top__logo logo">
@@ -473,6 +547,29 @@
               <p class="font-montserrat">Задайте их нам прямо сейчас!</p>
 
               <button>Задать вопрос</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex container">
+          <div class="footer__down">
+            <p class="footer__down__copy">Copyright © УМ Текстиль, 2020</p>
+
+            <div class="d-flex ai-center footer__down__right">
+              <ul class="footer__down__links">
+                <li>
+                  <a href="#"> Пользовательское соглашение </a>
+                </li>
+
+                <li>
+                  <a href="#"> Политика обработки персональных данных </a>
+                </li>
+              </ul>
+
+              <a href="#" class="footer__down__creator">
+                Сделано в
+                <img src="img/sva.svg" alt="SVA Creative Agency" />
+              </a>
             </div>
           </div>
         </div>
