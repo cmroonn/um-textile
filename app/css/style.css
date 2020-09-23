@@ -407,9 +407,16 @@ a {
   .footer .logo {
     color: white;
     margin-bottom: 30px; }
+  @media screen and (max-width: 1024px) {
+    .footer .contacts__link {
+      width: 160px; } }
 
 .footer__phone {
   margin-bottom: 15px; }
+  @media screen and (max-width: 1024px) {
+    .footer__phone {
+      width: 160px;
+      padding-left: 7px; } }
   .footer__phone span {
     -webkit-background-clip: text;
     background-clip: text;
@@ -419,6 +426,9 @@ a {
     font-weight: 500;
     color: transparent;
     margin-left: 24px; }
+    @media screen and (max-width: 768px) {
+      .footer__phone span {
+        font-size: 12px; } }
   .footer__phone:hover span {
     opacity: 0.5; }
   .footer__phone:active span {
@@ -430,6 +440,13 @@ a {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media screen and (max-width: 1024px) {
+    .footer__socials {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 30px; } }
 
 .footer__socials__link {
   margin-right: 18px;
@@ -440,6 +457,9 @@ a {
     margin-right: 0; }
   .footer__socials__link img {
     height: 25px; }
+    @media screen and (max-width: 500px) {
+      .footer__socials__link img {
+        height: 20px; } }
   .footer__socials__link:hover {
     opacity: 0.5;
     -webkit-transition: 0.2s;
@@ -730,6 +750,9 @@ a {
       margin: 10px 0 20px; }
       .footer__down__links li:after {
         display: none; } }
+  @media screen and (max-width: 500px) {
+    .footer__down__links {
+      font-size: 12px; } }
 
 .footer__down__creator {
   color: white;
@@ -3916,15 +3939,18 @@ a {
     display: block; }
   @media screen and (max-width: 1024px) {
     .dropdown_menu {
-      height: -webkit-calc(100vh - 160px);
-      height: calc(100vh - 160px);
-      top: 160px;
-      left: 0; } }
+      height: -webkit-calc(100vh - 153px);
+      height: calc(100vh - 153px);
+      top: 153px;
+      left: 0;
+      max-width: unset;
+      width: 100%; } }
 
 .dropdown_menu__list {
   width: 100%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 340px; }
   .dropdown_menu__list li {
     background: white;
     position: relative; }
