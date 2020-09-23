@@ -24,9 +24,11 @@ a {
   box-sizing: border-box; }
 
 button,
-input {
+input,
+select {
   font-family: "Gilroy", sans-serif;
-  outline: none; }
+  outline: none;
+  -webkit-appearance: none; }
 
 button {
   background: none;
@@ -3939,9 +3941,9 @@ a {
     display: block; }
   @media screen and (max-width: 1024px) {
     .dropdown_menu {
-      height: -webkit-calc(100vh - 153px);
-      height: calc(100vh - 153px);
-      top: 153px;
+      min-height: -webkit-calc(100vh - 160px);
+      min-height: calc(100vh - 160px);
+      top: 160px;
       left: 0;
       max-width: unset;
       width: 100%; } }
@@ -3950,7 +3952,8 @@ a {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 340px; }
+  max-width: 340px;
+  margin: auto; }
   .dropdown_menu__list li {
     background: white;
     position: relative; }

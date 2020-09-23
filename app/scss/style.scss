@@ -46,9 +46,11 @@ a {
 }
 
 button,
-input {
+input,
+select{
   font-family: "Gilroy", sans-serif;
   outline: none;
+  -webkit-appearance: none;
 }
 
 button {
