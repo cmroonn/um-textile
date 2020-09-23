@@ -138,27 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const brandsCarousel = new Swiper(".brands__slider", {
-        slidesPerView: 2,
-        slidesPerColumn: 1,
-        spaceBetween: 14,
-
-        breakpoints: {
-          992: {
-            slidesPerView: 6,
-
-            navigation: {
-              nextEl: ".brands .slider_next_el",
-              prevEl: ".brands .slider_prev_el",
-            },
-          },
-        },
-      });
-    } catch (e) {
-      console.log(e);
-    }
-
-    try {
       const itemInteresting = new Swiper(".item__interesting_slider", {
         direction: "horizontal",
         slidesPerView: 4,
@@ -294,44 +273,121 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(e);
   }
 
-  $(".catalog__tags__list").slick({
-    rows: 2,
-    slidesToShow: 2,
-    arrows: true,
-    slidesToScroll: 2,
-    infinite: false,
+  try {
+    if (window.innerWidth <= 768) {
+      $(".catalog__tags__list").slick({
+        slidesToShow: 2,
+        arrows: true,
+        slidesToScroll: 1,
+        infinite: true,
+        rows: 2,
 
-    nextArrow: `<button>
-                  <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M0.222294 13.7374C0.518686 14.0875 0.999231 14.0875 1.29562 13.7374L7 7L1.29562 0.262551C0.999229 -0.0875172 0.518684 -0.0875172 0.222293 0.262551C-0.0740978 0.612619 -0.0740977 1.18019 0.222294 1.53026L4.85335 7L0.222294 12.4697C-0.0740968 12.8198 -0.0740967 13.3874 0.222294 13.7374Z" fill="#393840"/>
-                  </svg>
-                </button>`,
-    prevArrow: `<button>
-                  <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M6.77771 13.7374C6.48131 14.0875 6.00077 14.0875 5.70438 13.7374L-3.0598e-07 7L5.70438 0.262551C6.00077 -0.0875172 6.48132 -0.0875172 6.77771 0.262551C7.0741 0.612619 7.0741 1.18019 6.77771 1.53026L2.14665 7L6.77771 12.4697C7.0741 12.8198 7.0741 13.3874 6.77771 13.7374Z" fill="#393840"/>
-                  </svg>
-                </button>`,
-  });
+        nextArrow: `<button>
+                      <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M0.222294 13.7374C0.518686 14.0875 0.999231 14.0875 1.29562 13.7374L7 7L1.29562 0.262551C0.999229 -0.0875172 0.518684 -0.0875172 0.222293 0.262551C-0.0740978 0.612619 -0.0740977 1.18019 0.222294 1.53026L4.85335 7L0.222294 12.4697C-0.0740968 12.8198 -0.0740967 13.3874 0.222294 13.7374Z" fill="#393840"/>
+                      </svg>
+                    </button>`,
+        prevArrow: `<button>
+                      <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M6.77771 13.7374C6.48131 14.0875 6.00077 14.0875 5.70438 13.7374L-3.0598e-07 7L5.70438 0.262551C6.00077 -0.0875172 6.48132 -0.0875172 6.77771 0.262551C7.0741 0.612619 7.0741 1.18019 6.77771 1.53026L2.14665 7L6.77771 12.4697C7.0741 12.8198 7.0741 13.3874 6.77771 13.7374Z" fill="#393840"/>
+                      </svg>
+                    </button>`,
+      });
+
+      $(".brands__slider").slick({
+        rows: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: false,
+        arrows: false,
+        dots: true,
+        dotsClass: "slider_pagination",
+      });
+    } else {
+      $(".catalog__tags__list").slick({
+        slidesToShow: 6,
+        arrows: true,
+        slidesToScroll: 1,
+        infinite: true,
+        rows: 1,
+
+        nextArrow: `<button>
+                      <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M0.222294 13.7374C0.518686 14.0875 0.999231 14.0875 1.29562 13.7374L7 7L1.29562 0.262551C0.999229 -0.0875172 0.518684 -0.0875172 0.222293 0.262551C-0.0740978 0.612619 -0.0740977 1.18019 0.222294 1.53026L4.85335 7L0.222294 12.4697C-0.0740968 12.8198 -0.0740967 13.3874 0.222294 13.7374Z" fill="#393840"/>
+                      </svg>
+                    </button>`,
+        prevArrow: `<button>
+                      <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M6.77771 13.7374C6.48131 14.0875 6.00077 14.0875 5.70438 13.7374L-3.0598e-07 7L5.70438 0.262551C6.00077 -0.0875172 6.48132 -0.0875172 6.77771 0.262551C7.0741 0.612619 7.0741 1.18019 6.77771 1.53026L2.14665 7L6.77771 12.4697C7.0741 12.8198 7.0741 13.3874 6.77771 13.7374Z" fill="#393840"/>
+                      </svg>
+                    </button>`,
+
+        responsive: [
+          {
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 4,
+            },
+
+            breakpoint: 950,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+        ],
+      });
+
+      $(".brands__slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        infinite: false,
+        arrows: true,
+        dots: false,
+        nextArrow: ".brands .slider_next_el",
+        prevArrow: ".brands .slider_prev_el",
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
 
   try {
-    $(".brands__slider").slick({
-      rows: 2,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      infinite: false,
-      arrows: false,
-      dots: true,
-      dotsClass: "slider_pagination",
-    });
-
     $(".item__photo__minis").slick({
-      slidesToShow: 1,
-      infinite: true,
-      arrows: false,
-      dots: true,
-      dotsClass: "slider_pagination",
+      responsive: [
+        {
+          breakpoint: 3000,
+          settings: "unslick",
+        },
+
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            infinite: true,
+            arrows: false,
+            dots: true,
+            dotsClass: "slider_pagination",
+          },
+        },
+      ],
     });
   } catch (e) {
     console.log(e);
+  }
+
+  {
+    const allInputs = document.querySelectorAll(
+      ".cart-input input, .cart-input select"
+    );
+    console.log(allInputs);
+    allInputs.forEach((input) => {
+      input.addEventListener("focus", () => {
+        input.closest(".cart-input").classList.add("focus");
+      });
+
+      input.addEventListener("blur", () => {
+        input.closest(".cart-input").classList.remove("focus");
+      });
+    });
   }
 });
