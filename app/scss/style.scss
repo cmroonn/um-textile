@@ -4117,7 +4117,7 @@ a {
   }
 
   @media screen and (max-width: 1024px) {
-    height: calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
     top: 160px;
     left: 0;
     max-width: unset;
