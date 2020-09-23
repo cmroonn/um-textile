@@ -1520,6 +1520,8 @@ a {
     visibility: hidden; }
   .product-card__wishList:hover .product-card__wishList__hover {
     visibility: visible; }
+  .product-card__wishList.item__wishList {
+    position: static; }
 
 .product-card__preview {
   position: relative;

@@ -13,6 +13,15 @@
     <main class="main" style="background: none">
       <!-- Header -->
       <header class="header" id="header">
+        <div class="header__mob_line">
+          <a
+            href="tel:+7 495 006 06 07"
+            class="d-flex ai-center header__top__actions__phone"
+          >
+            <img src="img/icons/phone.svg" alt="" />
+            <span>+7 495 006 06 07</span>
+          </a>
+        </div>
         <div class="header__top">
           <div class="d-flex ai-center jc-between container">
             <!-- Logo -->
@@ -49,46 +58,9 @@
                 <span class="d-flex jc-center ai-center"> 99+ </span>
               </a>
 
-              <a
-                href="#"
-                class="header__top__actions__search"
-                id="showSearchbar"
-              >
+              <a href="#" class="header__top__actions__search">
                 <img src="img/icons/search.svg" alt="" />
               </a>
-
-              <div class="header__searchbar" id="searchbar">
-                <form class="d-flex ai-center">
-                  <div class="header__searchbar__string">
-                    <input
-                      type="text"
-                      placeholder="Здесь может быть ваш запрос, например: Хочу питсы"
-                    />
-
-                    <button type="button" id="closeSearchbar">
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 10 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M6.75007 5L10 1.75007L8.24993 0L5 3.24993L1.75007 0L0 1.75007L3.24993 5L0 8.24993L1.75007 10L5 6.75007L8.24993 10L10 8.24993L6.75007 5Z"
-                          fill="#393840"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <button type="submit">
-                    <img src="img/icons/search.svg" alt="" />
-                  </button>
-                </form>
-              </div>
             </div>
           </div>
         </div>
@@ -368,5 +340,55 @@
         </div>
       </footer>
     </main>
+
+    <!-- dropdown menu -->
+    <div class="dropdown_menu">
+      <ul class="dropdown_menu__list">
+        <li>
+          <a href="#"> Гель-лак </a>
+        </li>
+
+        <li>
+          <a href="#">
+            Наборы для гель-лака
+            <svg
+              width="5"
+              height="11"
+              viewBox="0 0 5 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.5"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.158781 0.20629C0.370489 -0.0687637 0.713735 -0.0687638 0.925443 0.20629L5 5.5L0.925443 10.7937C0.713735 11.0688 0.370489 11.0688 0.158781 10.7937C-0.052927 10.5187 -0.052927 10.0727 0.158781 9.79765L3.46668 5.5L0.158781 1.20235C-0.0529271 0.927293 -0.0529271 0.481343 0.158781 0.20629Z"
+                fill="#393840"
+              />
+            </svg>
+          </a>
+
+          <ul class="dropdown_menu__submenu">
+            <li>
+              <a href="#"> Маникюрные инструменты </a>
+            </li>
+
+            <li>
+              <a href="#"> Маникюрные инструменты </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"> Декор для ногтей </a>
+        </li>
+
+        <li>
+          <a href="#"> Маникюрные инструменты </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

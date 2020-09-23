@@ -1546,6 +1546,10 @@ a {
       visibility: visible;
     }
   }
+
+  &.item__wishList {
+    position: static;
+  }
 }
 .product-card__preview {
   position: relative;
