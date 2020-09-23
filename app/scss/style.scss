@@ -47,7 +47,7 @@ a {
 
 button,
 input,
-select{
+select {
   font-family: "Gilroy", sans-serif;
   outline: none;
   -webkit-appearance: none;
@@ -847,12 +847,15 @@ a {
     content: "";
     background: #393840;
     opacity: 0.4;
-    filter: blur(40px);
-    width: 158px;
+    -webkit-filter: blur(40px);
+    filter: blur(20px);
+    width: 139px;
     height: 23px;
     position: absolute;
     bottom: -10px;
     left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
 

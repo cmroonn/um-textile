@@ -851,8 +851,8 @@ a {
     background: #393840;
     opacity: 0.4;
     -webkit-filter: blur(40px);
-    filter: blur(40px);
-    width: 158px;
+    filter: blur(20px);
+    width: 139px;
     height: 23px;
     position: absolute;
     bottom: -10px;
