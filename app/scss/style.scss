@@ -629,6 +629,12 @@ a {
       color: rgba(248, 248, 248, 0.7);
       font-size: 1.125rem;
       font-weight: 500;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: rgba(248, 248, 248, 1);
+        transition: 0.3s ease;
+      }
     }
   }
 
