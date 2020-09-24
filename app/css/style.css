@@ -380,8 +380,8 @@ a {
     padding: 22px 0; }
     .breadcrumbs ul li {
       font-size: 1em;
-      color: rgba(62, 63, 67, 0.5);
-      margin-right: 12px; }
+      margin-right: 12px;
+      cursor: default; }
       .breadcrumbs ul li:after {
         content: "";
         background: url(../img/icons/arr-right.svg) no-repeat;
@@ -391,7 +391,17 @@ a {
         height: 10px;
         margin-left: 12px; }
       .breadcrumbs ul li a {
-        font-size: inherit; }
+        font-size: inherit;
+        color: rgba(62, 63, 67, 0.5);
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+        opacity: 0.6; }
+        .breadcrumbs ul li a:hover {
+          -webkit-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s;
+          opacity: 0.6; }
       .breadcrumbs ul li:last-child:after {
         display: none; }
   @media screen and (max-width: 768px) {
@@ -1502,7 +1512,15 @@ a {
   background: none;
   border: 1px solid white;
   font-weight: 500;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .discounts__button:hover {
+    opacity: 0.6;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
   @media screen and (max-width: 768px) {
     .discounts__button {
       width: 121px;
@@ -2771,7 +2789,8 @@ a {
 .item__photo-mini {
   width: 150px;
   height: 150px;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .item__photo-mini img {
     width: 100%;
     height: 100%; }
@@ -2947,7 +2966,10 @@ a {
   background: none;
   font-size: 1rem;
   font-weight: 500;
-  margin-right: 8px; }
+  margin-right: 8px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
   .item__block__fast-buy:hover {
     background: #393840;
     color: white; }
@@ -3000,10 +3022,21 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  border: 1px solid white;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .item__block__button:hover {
+    color: #393840;
+    background: white;
+    border: 1px solid #393840;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
 
 .item__block__price {
   margin: 0;
@@ -3613,7 +3646,8 @@ a {
     background: none;
     top: -15px;
     -ms-touch-action: none;
-    touch-action: none; }
+    touch-action: none;
+    cursor: pointer; }
     .filter_block__slider .ui-slider-handle:after {
       content: "";
       background: #393840;

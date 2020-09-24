@@ -401,8 +401,8 @@ a {
 
     li {
       font-size: 1em;
-      color: rgba(62, 63, 67, 0.5);
       margin-right: 12px;
+      cursor: default;
       &:after {
         content: "";
         background: url(../img/icons/arr-right.svg) no-repeat;
@@ -415,6 +415,13 @@ a {
 
       a {
         font-size: inherit;
+        color: rgba(62, 63, 67, 0.5);
+        transition: 0.2s;
+        opacity: 0.6;
+        &:hover {
+          transition: 0.2s;
+          opacity: 0.6;
+        }
       }
 
       &:last-child {
@@ -1518,6 +1525,12 @@ a {
   border: 1px solid white;
   font-weight: 500;
   z-index: 1;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
 
   @media screen and (max-width: 768px) {
     width: 121px;
@@ -2928,6 +2941,7 @@ a {
   width: 150px;
   height: 150px;
   cursor: pointer;
+  outline: none;
   img {
     width: 100%;
     height: 100%;
@@ -3112,6 +3126,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   margin-right: 8px;
+  transition: 0.2s;
 }
 
 .item__block__content__actions {
@@ -3151,7 +3166,16 @@ a {
   font-weight: 500;
   display: flex;
   align-items: center;
+  border: 1px solid white;
   justify-content: center;
+  transition: 0.2s;
+
+  &:hover {
+    color: #393840;
+    background: white;
+    border: 1px solid #393840;
+    transition: 0.2s;
+  }
 }
 
 .item__block__price {
@@ -3787,6 +3811,7 @@ a {
     background: none;
     top: -15px;
     touch-action: none;
+    cursor: pointer;
     &:after {
       content: "";
       background: #393840;
