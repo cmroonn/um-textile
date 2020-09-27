@@ -1018,7 +1018,7 @@ a {
   height: 413px;
   transition: none;
   box-shadow: 30px 30px 60px rgba(75, 85, 116, 0.2);
-
+  border: 2px solid white;
   @media screen and (max-width: 1410px) {
     width: 600px;
     height: 300px;
@@ -1439,15 +1439,16 @@ a {
     width: 85%;
     height: 50px;
     background: #393840;
-    opacity: 0.6;
+    opacity: 0.8;
     -webkit-filter: blur(50px);
-    filter: blur(33px);
+    filter: blur(25px);
     position: absolute;
-    bottom: -14px;
+    bottom: 0px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+    z-index: -1;
   }
 
   @media screen and (max-width: 768px) {
@@ -1542,6 +1543,7 @@ a {
 
 .product-card {
   max-width: 352px;
+  padding-bottom: 30px;
 }
 .product-card__wishList {
   position: absolute;
@@ -1591,6 +1593,7 @@ a {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+    z-index: -1;
 
     @media screen and (max-width: 500px) {
       width: 60%;
@@ -1751,17 +1754,18 @@ a {
   &:after {
     content: "";
     background: #393840;
-    opacity: 0.4;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
+    opacity: 0.3;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
     width: 158px;
     height: 23px;
     position: absolute;
-    bottom: -10px;
+    bottom: -7px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+    z-index: -1;
   }
 
   &:hover {
@@ -2934,9 +2938,32 @@ a {
 .item__photo-big {
   width: 480px;
   height: 480px;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 1;
+
+    &.zoomImg {
+      width: 150% !important;
+      height: 150% !important;
+      cursor: crosshair;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    filter: blur(40px);
+    height: 30px;
+    width: 80%;
+    background: #000000;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
   }
 
   @media screen and (max-width: 768px) {
@@ -2963,10 +2990,32 @@ a {
   height: 150px;
   cursor: pointer;
   outline: none;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
+    z-index: 1;
+    position: relative;
   }
+
+  &:after {
+    content: "";
+    display: block;
+    -webkit-filter: blur(40px);
+    filter: blur(10px);
+    opacity: 0.8;
+    height: 30px;
+    width: 80%;
+    background: #000000;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 0;
+  }
+
   @media screen and (max-width: 768px) {
     width: 480px;
     height: 480px;
@@ -3054,9 +3103,26 @@ a {
 }
 
 .item_color_wrap {
-  &:nth-child(6n) {
-    &:after {
-      display: none;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    &:nth-child(6n) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &.active {
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+      content: "";
+      z-index: 0;
+      border-radius: 50%;
     }
   }
 }
@@ -3066,6 +3132,9 @@ a {
   width: 22px;
   height: 22px;
   border: 2px solid rgba(57, 56, 64, 0.15);
+  position: relative;
+  z-index: 1;
+
   &.color-black {
     background: #000;
   }
@@ -3187,15 +3256,34 @@ a {
   font-weight: 500;
   display: flex;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid #393840;
   justify-content: center;
   transition: 0.2s;
+  position: relative;
+
+  span {
+    z-index: 1;
+  }
 
   &:hover {
     color: #393840;
     background: white;
     border: 1px solid #393840;
     transition: 0.2s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: #393840;
+    opacity: 0.6;
+    filter: blur(20px);
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 20px;
+    width: 80%;
+    z-index: 0;
   }
 }
 

@@ -225,8 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
     allMinis.forEach((elem) => {
       elem.addEventListener("click", () => {
         bigPhoto.src = elem.src;
+        $(".item__photo-big").trigger("zoom.destroy");
+        $(".item__photo-big").zoom();
       });
     });
+    $(".item__photo-big").zoom();
   } catch (e) {
     console.log(e);
   }
