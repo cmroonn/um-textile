@@ -300,6 +300,7 @@
                     placeholder="Фамилия"
                     required
                     tabindex="0"
+                    class="field"
                   />
                 </label>
               </div>
@@ -315,6 +316,7 @@
                     placeholder="Телефон*"
                     required
                     class="field"
+                    id="phone_field"
                   />
                 </label>
 
@@ -322,7 +324,7 @@
                   <div class="icon">
                     <img src="img/icons/mail_icon.svg" alt="e-mail" />
                   </div>
-                  <input type="text" name="e-mail" placeholder="E-mail" />
+                  <input type="text" name="email" placeholder="E-mail" />
                 </label>
               </div>
 
@@ -439,7 +441,7 @@
 
               <p>16.000<span class="currency">₽</span></p>
 
-              <button type="button" class="empty__btn">
+              <button type="button" class="empty__btn" id="cartSubmit">
                 Подветвердить заказ
               </button>
 
@@ -724,6 +726,12 @@
       </div>
     </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"
+      integrity="sha512-0ctiD2feH7vdHZ5jjAKNYts4h+IBRq7Nm5wACMJG1Pj5AQyprSHzX/ijMm77AcLLW5cemQptH+9EcviiKCC0cQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/approvejs/3.1.2/approve.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

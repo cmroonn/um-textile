@@ -435,4 +435,129 @@ document.addEventListener("DOMContentLoaded", () => {
       popupOrderCall.classList.add("show");
     });
   }
+
+  // Inputs validation
+
+  {
+    try {
+      const form = document.querySelector(".cart");
+      const submit = document.getElementById("cartSubmit");
+      const emailInput = document.querySelector("input[name='email']");
+      const fields = document.querySelectorAll(".cart .field");
+      const telInput = document.getElementById("phone_field");
+
+      console.log(emailInput);
+      let rules = {
+        email: {
+          email: true,
+          required: true,
+        },
+
+        required: {
+          required: true,
+        },
+      };
+
+      const validate = () => {
+        if (!approve.value(emailInput.value, rules.email).approved) {
+          emailInput.parentElement.classList.add("error");
+        } else {
+          emailInput.parentElement.classList.remove("error");
+        }
+
+        console.log(telInput.value.length);
+
+        for (var i = 0; i < fields.length; i++) {
+          if (!approve.value(fields[i].value, rules.required).approved) {
+            fields[i].parentElement.classList.add("error");
+          } else {
+            fields[i].parentElement.classList.remove("error");
+          }
+        }
+
+        if (telInput.value.length < 16) {
+          telInput.parentElement.classList.add("error");
+          console.log("added");
+        } else {
+          telInput.parentElement.classList.remove("error");
+        }
+        let errors = document.querySelectorAll(".cart .cart-input.error");
+
+        if (errors.length <= 0) {
+          return true;
+        } else {
+          errors[0].focus();
+          errors.forEach((error) => {
+            const input = error.querySelector("input");
+            input.addEventListener("keyup", (e) => {
+              // if input has been changed remove class error
+
+              console.log(input.value);
+              if (input.value !== "") {
+                error.classList.remove("error");
+              } else {
+                error.classList.add("error");
+              }
+            });
+          });
+          return false;
+        }
+      };
+
+      // On submit
+      submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        validate();
+
+        if (validate()) {
+          $.ajax({
+            method: "POST",
+            url: "sender.php",
+          });
+        } else {
+          return false;
+        }
+      });
+
+      // Allow only "-" and digits
+
+      const disableLetters = (input) => {
+        let val = input.value;
+        let rep = /[\.;":'a-zA-Zа-яА-Я]/;
+
+        if (rep.test(val)) {
+          val = val.replace(rep, "");
+          input.value = val;
+        }
+      };
+
+      const inputsDisableLetters = document.querySelectorAll(
+        "input[name='apartament']"
+      );
+
+      inputsDisableLetters.forEach((input) => {
+        input.addEventListener("keyup", () => {
+          disableLetters(input);
+        });
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  try {
+    const phoneMask = IMask(document.getElementById("phone_field"), {
+      mask: "+{7}(000)000-00-00",
+    });
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
+    const orderPhone = IMask(document.getElementById("orderCall-phone-mask"), {
+      mask: "+{7}(000)000-00-00",
+    });
+  } catch (e) {
+    console.log(e);
+  }
 });
