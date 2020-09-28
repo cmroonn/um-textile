@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       $(".brands__slider").slick({
-        rows: 1,
+        rows: 2,
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: false,
@@ -390,6 +390,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       input.addEventListener("blur", () => {
         input.closest(".cart-input").classList.remove("focus");
+      });
+    });
+  }
+
+  {
+    const allColors = document.querySelectorAll(".item_color_wrap");
+
+    allColors.forEach((color) => {
+      color.addEventListener("click", () => {
+        allColors.forEach((col) => col.classList.remove("active"));
+        color.classList.add("active");
       });
     });
   }
