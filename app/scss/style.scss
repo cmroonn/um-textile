@@ -468,10 +468,11 @@ a {
   }
 }
 
-.footer__phone {
+.footer__phone,
+.footer__address {
   margin-bottom: 15px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     width: 160px;
     padding-left: 7px;
   }
@@ -498,6 +499,11 @@ a {
       opacity: 0.7;
     }
   }
+}
+
+.footer__address {
+  display: flex;
+  align-items: center;
 }
 .footer__socials {
   margin-top: 50px;
@@ -634,11 +640,12 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
+  font-size: 16px;
   li {
     margin-bottom: 14px;
     a {
       color: rgba(248, 248, 248, 0.7);
-      font-size: 1.125rem;
+      font-size: 1.125em;
       font-weight: 500;
       transition: 0.3s ease;
 
@@ -647,6 +654,10 @@ a {
         transition: 0.3s ease;
       }
     }
+  }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 14px;
   }
 
   @media screen and (max-width: 500px) {
@@ -1126,14 +1137,32 @@ a {
       left: 20px;
       top: unset;
       transform: unset;
-      bottom: 25px;
+      bottom: 30px;
+      width: 36px;
+      height: 36px;
+
+      &:hover {
+        transform: scale(1.1) !important;
+      }
+      &:active {
+        transform: scale(0.8) !important;
+      }
     }
 
     .slider_next_el {
       left: 70px;
       top: unset;
       transform: unset;
-      bottom: 25px;
+      bottom: 30px;
+      width: 36px;
+      height: 36px;
+
+      &:hover {
+        transform: scale(1.1) !important;
+      }
+      &:active {
+        transform: scale(0.8) !important;
+      }
     }
   }
 }
@@ -2571,6 +2600,13 @@ a {
 
   a {
     color: rgba(20, 20, 20, 0.5);
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
   }
 }
 
