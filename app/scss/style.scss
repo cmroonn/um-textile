@@ -2477,6 +2477,14 @@ a {
       font-size: 18px;
       max-width: 490px;
     }
+    button {
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.2s;
+      }
+    }
 
     .product-price {
       margin: 0;
@@ -3022,10 +3030,17 @@ a {
     opacity: 0.8;
     transition: 0.2s;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .cart__actions__reload {
   color: rgba(57, 56, 64, 0.5);
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .dotted {
@@ -3047,6 +3062,10 @@ a {
     width: 100%;
     margin: 12px 0;
     opacity: 0.5;
+  }
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s;
   }
 }
 /* Cart styling ends */
