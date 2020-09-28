@@ -404,4 +404,35 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  {
+    const allPopups = document.querySelectorAll(".popup");
+    const closePopupBtn = document.querySelectorAll(".popup__close");
+
+    allPopups.forEach((popup) => {
+      popup.addEventListener("click", (e) => {
+        e.target === popup ? popup.classList.remove("show") : false;
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.keyCode === 27) {
+          popup.classList.remove("show");
+        }
+      });
+    });
+
+    closePopupBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.closest(".popup").classList.remove("show");
+      });
+    });
+
+    const openOrderCall = document.getElementById("openOrderCall");
+    const popupOrderCall = document.querySelector(".order_call");
+
+    openOrderCall.addEventListener("click", (e) => {
+      e.preventDefault();
+      popupOrderCall.classList.add("show");
+    });
+  }
 });
