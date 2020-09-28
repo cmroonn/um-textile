@@ -221,15 +221,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   try {
     const allMinis = document.querySelectorAll(".item__photo-mini img");
-    const bigPhoto = document.querySelector(".item__photo-big img");
+    const bigPhoto = document.querySelector(".item__photo-big_wrap img");
     allMinis.forEach((elem) => {
       elem.addEventListener("click", () => {
         bigPhoto.src = elem.src;
-        $(".item__photo-big").trigger("zoom.destroy");
-        $(".item__photo-big").zoom();
+        $(".item__photo-big_wrap").trigger("zoom.destroy");
+        $(".item__photo-big_wrap").zoom();
       });
     });
-    $(".item__photo-big").zoom();
+    $(".item__photo-big_wrap").zoom();
   } catch (e) {
     console.log(e);
   }

@@ -1313,7 +1313,7 @@ a {
     height: 50px;
     background: #393840;
     opacity: 0.9;
-    -webkit-filter: blur(50px);
+    -webkit-filter: blur(33px);
     filter: blur(33px);
     position: absolute;
     bottom: 0px;
@@ -1321,6 +1321,10 @@ a {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0); }
+    @media screen and (max-width: 768px) {
+      .category-cards__item:after {
+        -webkit-filter: blur(12px);
+        filter: blur(12px); } }
   @media screen and (max-width: 1340px) {
     .category-cards__item {
       height: 140px; } }
@@ -1762,6 +1766,10 @@ a {
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     z-index: 0; }
+    @media screen and (max-width: 500px) {
+      .product-card__button:after {
+        width: 80px;
+        bottom: -5px; } }
   .product-card__button:hover {
     background: -o-linear-gradient(47.65deg, #01bba5 26.16%, #009fc2 73.84%);
     background: linear-gradient(42.35deg, #01bba5 26.16%, #009fc2 73.84%); }
@@ -1898,7 +1906,11 @@ a {
       -ms-flex-pack: center;
       justify-content: center; }
       .brands__slide img {
-        margin: auto; } }
+        margin: auto;
+        width: 70%;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content; } }
 
 .main-page__new-products {
   padding-top: 90px;
@@ -2899,13 +2911,13 @@ a {
   .item__photo-big:after {
     content: "";
     display: block;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
+    -webkit-filter: blur(18px);
+    filter: blur(18px);
     height: 30px;
     width: 80%;
     background: #000000;
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -2914,6 +2926,9 @@ a {
   @media screen and (max-width: 768px) {
     .item__photo-big {
       display: none; } }
+
+.item__photo-big_wrap {
+  height: 100%; }
 
 .item__photo__minis {
   display: -webkit-box;
@@ -2956,6 +2971,13 @@ a {
     height: 100%;
     z-index: 1;
     position: relative; }
+  .item__photo-mini button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   .item__photo-mini:after {
     content: "";
     display: block;
