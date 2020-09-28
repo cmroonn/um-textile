@@ -468,6 +468,12 @@ a {
   }
 }
 
+.footer__phone {
+  img {
+    padding-left: 4px;
+  }
+}
+
 .footer__phone,
 .footer__address {
   margin-bottom: 15px;
@@ -504,6 +510,13 @@ a {
 .footer__address {
   display: flex;
   align-items: center;
+}
+
+.footer__address__icon_wrap {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer__socials {
   margin-top: 50px;
