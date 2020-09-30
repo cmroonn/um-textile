@@ -399,7 +399,7 @@
               <h2 class="subtitle">Способ доставки</h2>
 
               <!-- radio -->
-              <label class="cart-radio">
+              <!-- <label class="cart-radio">
                 <input
                   type="radio"
                   value="Самовывоз"
@@ -409,20 +409,21 @@
                 />
 
                 <span class="d-flex flex-column"> Самовывоз </span>
+              </label> -->
+
+              <label class="control control-radio">
+                <input type="radio" name="delivery" checked="checked" />
+                <span class="control_name">Самовывоз</span>
+                <div class="control_indicator"></div>
               </label>
 
               <!-- radio -->
-              <label class="cart-radio">
-                <input
-                  type="radio"
-                  value="Доставка транспортной компанией"
-                  name="deliveryMethod"
-                  required
-                />
-
-                <span class="d-flex flex-column">
-                  Доставка транспортной компанией
-                </span>
+              <label class="control control-radio">
+                <input type="radio" name="delivery" />
+                <span class="control_name"
+                  >Доставка транспортной компанией</span
+                >
+                <div class="control_indicator"></div>
               </label>
             </div>
 
@@ -430,43 +431,25 @@
               <h2 class="subtitle">Способ оплаты</h2>
 
               <!-- radio -->
-              <label class="cart-radio">
-                <input
-                  type="radio"
-                  value="Наложенный платеж"
-                  name="payment"
-                  required
-                  checked
-                />
-
-                <span class="d-flex flex-column"> Наложенный платеж </span>
+              <label class="control control-radio">
+                <input type="radio" name="payment" checked="checked" />
+                <span class="control_name">Наложенный платеж</span>
+                <div class="control_indicator"></div>
               </label>
 
               <!-- radio -->
-              <label class="cart-radio">
-                <input
-                  type="radio"
-                  value="Оплата наличными"
-                  name="payment"
-                  required
-                  id="onlinePayment"
-                />
-
-                <span class="d-flex flex-column"> Оплата наличными </span>
+              <label class="control control-radio">
+                <input type="radio" name="payment" />
+                <span class="control_name">Оплата наличными</span>
+                <div class="control_indicator"></div>
               </label>
 
               <!-- radio -->
-              <label class="cart-radio">
-                <input
-                  type="radio"
-                  value="Безналичный расчет"
-                  name="payment"
-                  required
-                />
-
-                <span class="d-flex ai-center jc-between">
-                  Безналичный расчет
-                </span>
+              <!-- radio -->
+              <label class="control control-radio">
+                <input type="radio" name="payment" />
+                <span class="control_name">Безналичный расчет</span>
+                <div class="control_indicator"></div>
               </label>
             </div>
 
