@@ -74,9 +74,46 @@
                 <span class="d-flex jc-center ai-center"> 99+ </span>
               </a>
 
-              <a href="#" class="header__top__actions__search">
+              <a
+                href="#"
+                class="header__top__actions__search"
+                id="showSearchbar"
+              >
                 <img src="img/icons/search.svg" alt="" />
               </a>
+
+              <div class="header__searchbar" id="searchbar">
+                <form class="d-flex ai-center">
+                  <div class="header__searchbar__string">
+                    <input
+                      type="text"
+                      placeholder="Здесь может быть ваш запрос, например: Хочу питсы"
+                    />
+
+                    <button type="button" id="closeSearchbar">
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.75007 5L10 1.75007L8.24993 0L5 3.24993L1.75007 0L0 1.75007L3.24993 5L0 8.24993L1.75007 10L5 6.75007L8.24993 10L10 8.24993L6.75007 5Z"
+                          fill="#393840"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <button type="submit">
+                    <img src="img/icons/search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -1488,7 +1525,6 @@
                     name="firstname"
                     placeholder="Имя"
                     required=""
-                    class="field"
                     tabindex="0"
                   />
                 </label>
@@ -1503,6 +1539,7 @@
                     placeholder="Телефон*"
                     required=""
                     class="field"
+                    id="phone_field"
                   />
                 </label>
               </div>
@@ -1515,7 +1552,7 @@
                   <input type="text" name="e-mail" placeholder="E-mail" />
                 </label>
 
-                <button type="button" class="empty__btn">Отправить</button>
+                <button type="submit" class="empty__btn" id="submitCatalogForm">Отправить</button>
               </div>
             </form>
           </div>
@@ -1664,12 +1701,28 @@
     <div class="dropdown_menu">
       <ul class="dropdown_menu__list">
         <li>
-          <a href="#"> Гель-лак </a>
+          <a href="#"> Трикотажное полотно </a>
+        </li>
+
+        <li>
+          <a href="#"> Сорочечная ткань </a>
+        </li>
+
+        <li>
+          <a href="#"> Обивочные ткани </a>
+        </li>
+
+        <li>
+          <a href="#"> Ткани для постельного белья </a>
+        </li>
+
+        <li>
+          <a href="#"> Костюмные ткани </a>
         </li>
 
         <li>
           <a href="#">
-            Наборы для гель-лака
+            Другое
             <svg
               width="5"
               height="11"
@@ -1689,21 +1742,13 @@
 
           <ul class="dropdown_menu__submenu">
             <li>
-              <a href="#"> Маникюрные инструменты </a>
+              <a href="#"> Трикотажное полотно </a>
             </li>
 
             <li>
-              <a href="#"> Маникюрные инструменты </a>
+              <a href="#"> Трикотажное полотно </a>
             </li>
           </ul>
-        </li>
-
-        <li>
-          <a href="#"> Декор для ногтей </a>
-        </li>
-
-        <li>
-          <a href="#"> Маникюрные инструменты </a>
         </li>
       </ul>
     </div>
@@ -1793,8 +1838,8 @@
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/approvejs/3.1.2/approve.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js" integrity="sha512-0ctiD2feH7vdHZ5jjAKNYts4h+IBRq7Nm5wACMJG1Pj5AQyprSHzX/ijMm77AcLLW5cemQptH+9EcviiKCC0cQ==" crossorigin="anonymous"></script>
     <script>
       $(function () {
         $("#slider-price").slider({

@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
           ? (searchInput.value = "")
           : searchbar.classList.remove("show");
       });
-    } catch {}
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   {
@@ -254,6 +256,15 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       catalogBtn.addEventListener("click", (e) => {
         e.preventDefault();
+        document.addEventListener("click", (e) => {
+          if (
+            (e.target !== dropdown) &
+            (e.target !== catalogBtn) &
+            !e.target.closest(".dropdown_menu")
+          ) {
+            dropdown.classList.remove("show");
+          }
+        });
         dropdown.classList.toggle("show");
       });
     }
@@ -342,12 +353,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       $(".brands__slider").slick({
         slidesToShow: 6,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         infinite: false,
         arrows: true,
         dots: false,
         nextArrow: ".brands .slider_next_el",
         prevArrow: ".brands .slider_prev_el",
+        autoplay: true,
+        autoplaySpeed: 500,
+        infinite: true,
+        speed: 2000,
       });
     }
   } catch (e) {
@@ -436,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Inputs validation
+  // Inputs validation cart
 
   {
     try {
@@ -559,5 +574,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } catch (e) {
     console.log(e);
+  }
+
+  // Validate inputs on catalog page
+
+  {
+    const telInput = document.getElementById("phone_field");
+    const submitBtn = document.getElementById("submitCatalogForm");
+
+    const validate = () => {
+      if (telInput.value.length < 16) {
+        telInput.parentElement.classList.add("error");
+        console.log("added");
+      } else {
+        telInput.parentElement.classList.remove("error");
+      }
+      let errors = document.querySelectorAll(".cart .cart-input.error");
+
+      if (errors.length <= 0) {
+        return true;
+      } else {
+        errors[0].focus();
+        errors.forEach((error) => {
+          const input = error.querySelector("input");
+          input.addEventListener("keyup", (e) => {
+            // if input has been changed remove class error
+
+            console.log(input.value);
+            if (input.value !== "") {
+              error.classList.remove("error");
+            } else {
+              error.classList.add("error");
+            }
+          });
+        });
+        return false;
+      }
+    };
+
+    submitBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      validate();
+
+      if (validate()) {
+        $.ajax({
+          method: "POST",
+          url: "sender.php",
+        });
+      } else {
+        return false;
+      }
+    });
   }
 });
