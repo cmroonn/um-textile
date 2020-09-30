@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 14,
         watchOverflow: true,
-        navigation: {
-          nextEl: ".slider_next_el",
-          prevEl: ".slider_prev_el",
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
         },
 
         pagination: {
@@ -74,7 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         direction: "horizontal",
         slidesPerView: 2,
         spaceBetween: 14,
-        simulateTouch: false,
+
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
 
         pagination: {
           el: ".main-page__popular .slider_pagination",
@@ -110,12 +114,15 @@ document.addEventListener("DOMContentLoaded", () => {
         direction: "horizontal",
         slidesPerView: 2,
         spaceBetween: 14,
-        simulateTouch: false,
         navigation: {
           nextEl: ".main-page__new-products .slider_next_el",
           prevEl: ".main-page__new-products .slider_prev_el",
         },
 
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
         pagination: {
           el: ".main-page__new-products .slider_pagination",
           type: "bullets",
@@ -569,7 +576,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   try {
-    const orderPhone = IMask(document.getElementById("orderCall-phone-mask"), {
+    const orderPhone = IMask(document.getElementById("phone_fieldd"), {
       mask: "+{7}(000)000-00-00",
     });
   } catch (e) {
@@ -579,51 +586,110 @@ document.addEventListener("DOMContentLoaded", () => {
   // Validate inputs on catalog page
 
   {
-    const telInput = document.getElementById("phone_field");
-    const submitBtn = document.getElementById("submitCatalogForm");
+    try {
+      const telInput = document.getElementById("phone_field");
+      const submitBtn = document.getElementById("submitCatalogForm");
 
-    const validate = () => {
-      if (telInput.value.length < 16) {
-        telInput.parentElement.classList.add("error");
-        console.log("added");
-      } else {
-        telInput.parentElement.classList.remove("error");
-      }
-      let errors = document.querySelectorAll(".cart .cart-input.error");
+      const validate = () => {
+        if (telInput.value.length < 16) {
+          telInput.parentElement.classList.add("error");
+          console.log("added");
+        } else {
+          telInput.parentElement.classList.remove("error");
+        }
+        let errors = document.querySelectorAll(".cart .cart-input.error");
 
-      if (errors.length <= 0) {
-        return true;
-      } else {
-        errors[0].focus();
-        errors.forEach((error) => {
-          const input = error.querySelector("input");
-          input.addEventListener("keyup", (e) => {
-            // if input has been changed remove class error
+        if (errors.length <= 0) {
+          return true;
+        } else {
+          errors[0].focus();
+          errors.forEach((error) => {
+            const input = error.querySelector("input");
+            input.addEventListener("keyup", (e) => {
+              // if input has been changed remove class error
 
-            console.log(input.value);
-            if (input.value !== "") {
-              error.classList.remove("error");
-            } else {
-              error.classList.add("error");
-            }
+              console.log(input.value);
+              if (input.value !== "") {
+                error.classList.remove("error");
+              } else {
+                error.classList.add("error");
+              }
+            });
           });
-        });
-        return false;
-      }
-    };
+          return false;
+        }
+      };
 
-    submitBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      validate();
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        validate();
 
-      if (validate()) {
-        $.ajax({
-          method: "POST",
-          url: "sender.php",
-        });
-      } else {
-        return false;
-      }
-    });
+        if (validate()) {
+          $.ajax({
+            method: "POST",
+            url: "sender.php",
+          });
+        } else {
+          return false;
+        }
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  // Validate inputs in order call popup
+
+  {
+    try {
+      const telInput = document.getElementById("phone_fieldd");
+      const submitBtn = document.getElementById("orderCallSubmit");
+
+      const validate = () => {
+        if (telInput.value.length < 16) {
+          telInput.parentElement.classList.add("error");
+          console.log("added");
+        } else {
+          telInput.parentElement.classList.remove("error");
+        }
+        let errors = document.querySelectorAll(".cart .cart-input.error");
+
+        if (errors.length <= 0) {
+          return true;
+        } else {
+          errors[0].focus();
+          errors.forEach((error) => {
+            const input = error.querySelector("input");
+            input.addEventListener("keyup", (e) => {
+              // if input has been changed remove class error
+
+              console.log(input.value);
+              if (input.value !== "") {
+                error.classList.remove("error");
+              } else {
+                error.classList.add("error");
+              }
+            });
+          });
+          return false;
+        }
+      };
+
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        validate();
+
+        if (validate()) {
+          $.ajax({
+            method: "POST",
+            url: "sender.php",
+          });
+        } else {
+          return false;
+        }
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
 });

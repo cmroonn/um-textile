@@ -2796,7 +2796,6 @@
               type="text"
               name="firstname"
               placeholder="Имя"
-              required
               class="field"
               tabindex="0"
             />
@@ -2806,12 +2805,7 @@
             <div class="icon">
               <img src="img/icons/mail_icon.svg" alt="e-mail" />
             </div>
-            <input
-              type="text"
-              name="e-mail"
-              placeholder="E-mail"
-              class="field"
-            />
+            <input type="text" name="e-mail" placeholder="E-mail" />
           </label>
 
           <label class="cart-input">
@@ -2824,6 +2818,7 @@
               placeholder="Телефон*"
               required
               class="field"
+              id="phone_fieldd"
             />
           </label>
 
@@ -2838,7 +2833,9 @@
             ></textarea>
           </label>
 
-          <button type="submit" class="empty__btn">Отправить</button>
+          <button type="submit" class="empty__btn" id="orderCallSubmit">
+            Отправить
+          </button>
         </form>
       </div>
     </div>
@@ -2856,6 +2853,11 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"
+      integrity="sha512-0ctiD2feH7vdHZ5jjAKNYts4h+IBRq7Nm5wACMJG1Pj5AQyprSHzX/ijMm77AcLLW5cemQptH+9EcviiKCC0cQ=="
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
