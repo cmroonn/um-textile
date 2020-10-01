@@ -2770,8 +2770,7 @@ a {
   .cart-checkbox input:checked + span:before {
     background-image: url(../img/icons/tick_icon2.svg);
     border: 2px solid #141414;
-    background-color: #141414;
-    background-clip: content-box; }
+    background-color: #141414; }
   .cart-checkbox input:checked + span {
     color: #141414; }
 
